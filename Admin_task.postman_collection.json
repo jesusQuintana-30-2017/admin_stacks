@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "ba4c2e9a-c276-4ea0-b822-314e6e0aef5d",
+		"name": "Admin_task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consultar grid de datos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/Task/filtros/P",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Task",
+						"filtros",
+						"P"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta de un solo registro",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/Task/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Task",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrado logico de registros",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/Task/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Task",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Iniciar tarea",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/Task/start/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Task",
+						"start",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insertar tarea",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/Task?id=0&description=tarea nueva3&start_date=2022-05-01&final_date=2022-05-30&duration=0&current_time=0&estatus=P&time_total=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Task"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0"
+						},
+						{
+							"key": "description",
+							"value": "tarea nueva3"
+						},
+						{
+							"key": "start_date",
+							"value": "2022-05-01"
+						},
+						{
+							"key": "final_date",
+							"value": "2022-05-30"
+						},
+						{
+							"key": "duration",
+							"value": "0"
+						},
+						{
+							"key": "current_time",
+							"value": "0"
+						},
+						{
+							"key": "estatus",
+							"value": "P"
+						},
+						{
+							"key": "time_total",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actulizar tarea",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/Task?id=0&description=tarea nueva3&start_date=2022-05-01&final_date=2022-05-30&duration=0&current_time=0&estatus=P&time_total=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Task"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "0"
+						},
+						{
+							"key": "description",
+							"value": "tarea nueva3"
+						},
+						{
+							"key": "start_date",
+							"value": "2022-05-01"
+						},
+						{
+							"key": "final_date",
+							"value": "2022-05-30"
+						},
+						{
+							"key": "duration",
+							"value": "0"
+						},
+						{
+							"key": "current_time",
+							"value": "0"
+						},
+						{
+							"key": "estatus",
+							"value": "P"
+						},
+						{
+							"key": "time_total",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actulizar tiempo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/Task/time/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Task",
+						"time",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detener tarea",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/Task/stop/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Task",
+						"stop",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cerrar tiempos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/Task/timecerrar/1?1=1&time_current=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"Task",
+						"timecerrar",
+						"1"
+					],
+					"query": [
+						{
+							"key": "1",
+							"value": "1"
+						},
+						{
+							"key": "time_current",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
