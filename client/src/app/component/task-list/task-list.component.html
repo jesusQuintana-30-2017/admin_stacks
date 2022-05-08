@@ -1,0 +1,46 @@
+
+  <div id='left-sidebar-criterios' class="col-md-2 left-sidebar">
+    <div class="scroll-sidebar col-md-10 col-sm-push-3">
+      <nav id='sidebar' class="sidebar-nav">
+        <form id="filtros" class="form-group" >
+          <label for="filtroestatus" class="col-form-label" >Estatus</label>
+            <select  name="filtroestatus" [(ngModel)]="status"  class="form-control" (change)="getTasks(status)" [value]='0'>
+              <option [value]="taskestatus.id" *ngFor="let taskestatus of taskestatus">{{taskestatus.description}}</option>
+            </select>        
+        </form>
+      </nav>
+    </div>
+  </div>
+  <div class="col-md-10"  >
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th mat-sort-header="name" matSort (matSortChange)="sortData($event)">Descripción</th>
+          <th mat-sort-header="fechafin" matSort (matSortChange)="sortData($event)">Fecha fin</th>
+          <th mat-sort-header="duracion" matSort (matSortChange)="sortData($event)">Duración</th>
+          <th mat-sort-header="tiempo" matSort (matSortChange)="sortData($event)">Tiempo registrado</th>
+          <th mat-sort-header="estatus" matSort (matSortChange)="sortData($event)">Estatus</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of sortedData">
+          <td>{{ task.description }}</td>
+          <td>{{ task.final_date }}</td>
+          <td>{{ task.duration }}</td>
+          <td>{{task.estatus == 'Completa' ? contador01(task.time_current):contador02(task.time_current,task.estatus)}}</td>
+          <td>{{ task.estatus }}</td>
+          <button id="play{{task.id}}" name="play{{task.id}}"  data-toggle='tooltip' data-placemen='bottom' title='Iniciar tarea'  type='button' class='btn-sm float-left' style="background-color: darkgreen;" *ngIf="task.estatus == 'Pendiente';" ><span  data-toggle='tooltip' class="material-icons" style="color:aliceblue;" (click)="StartTasks(task.id)" >{{play_reiniciar}}</span></button>
+          <button id="refresh{{task.id}}" name="refresh{{task.id}}"  data-toggle='tooltip' data-placemen='bottom' title='Reiniciar tarea'  type='button' class='btn-sm float-left' style="background-color: blue;" *ngIf="task.estatus == 'Pendiente';" ><span  data-toggle='tooltip' class="material-icons" style="color:aliceblue;" (click)="RestartTasks(task.id)" >refresh</span></button>
+          <button id="pause{{task.id}}" name="pause{{task.id}}"  data-toggle='tooltip' data-placemen='bottom' title='Pausar tarea'  type='button' class='btn-sm float-left' style="background-color: yellow;" *ngIf="task.estatus == 'Pendiente';"><span  data-toggle='tooltip' class="material-icons" style="color:aliceblue;" (click)="PausaTasks(task.id)" >pause</span></button>
+          <button id="stop{{task.id}}" name="stop{{task.id}}"  data-toggle='tooltip' data-placemen='bottom' title='Detener tarea'  type='button' class='btn-sm float-left' style="background-color: red;" *ngIf="task.estatus == 'Pendiente';"><span  data-toggle='tooltip' class="material-icons" style="color:aliceblue;" (click)="StopTasks(task.id)" >stop</span></button>
+          <button data-toggle='tooltip' data-placemen='bottom' title='Editar'  type='button' class='btn-sm float-left btn-success'><span  data-toggle='tooltip' class="material-icons" style="color:aliceblue" [routerLink]="task.estatus != 'Completa' ? ['/task/edit', task.id]:''" >edit</span></button>
+          <button data-toggle='tooltip' data-placemen='bottom' title='Eliminar' type='button' class='btn-sm float-left btn-danger'><span data-toggle='tooltip' class="material-icons" style="color:aliceblue" (click)="deleteTasks(task.id)">delete</span></button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+

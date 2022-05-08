@@ -1,0 +1,52 @@
+<div class="col-md-10 offset-md-1">
+    <div class="task">
+      <div class="task-body ">
+        <form action="">
+        <div class="row">
+          <div class="form-group col-md-4">
+            <label >Descripción</label>
+            <input type="text" name="description" [(ngModel)]="task.description" class="form-control" autofocus>
+          </div>
+          <div class="form-group col-md-4">
+            <label >Estatus</label>
+            <select  name="estatus" [(ngModel)]="task.estatus" class="form-select" >
+              <option [value]="taskestatus.id" *ngFor="let taskestatus of taskestatus" >{{taskestatus.description}}</option>
+            </select>
+          </div>
+        </div> 
+        <div class="row"> 
+          <div class="form-group col-md-4">
+            <label >Fecha de inicio</label>
+            <mat-form-field class="example-full-width col-md-12" appearance="fill">
+              <input matInput [matDatepicker]="picker1" [(ngModel)]="task.start_date" name="start_date" MY_FORMATS>
+                <mat-datepicker-toggle matSuffix [for]="picker1">
+                  <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label >Fecha de terminación</label>
+            <mat-form-field class="example-full-width col-md-12" appearance="fill">            
+              <input matInput [matDatepicker]="picker2" [(ngModel)]="task.final_date" name="final_date" MY_FORMATS>
+                <mat-datepicker-toggle matSuffix [for]="picker2">
+                  <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                </mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div> 
+          <div class="form-group col-md-4">&nbsp;</div>
+          <button class="btn btn-success btn-block" (click)="edit ? updateTask() : saveNewTask()" >
+            Save
+          </button>
+          <button class="btn btn-danger btn-block" [routerLink]="['/task']" >
+            Cancel
+          </button>
+        </form>
+      </div>
+    </div>
+</div>
+  
+
