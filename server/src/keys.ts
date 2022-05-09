@@ -1,7 +1,7 @@
 export default {
 
     database: {
-        host: '192.168.100.50',
+        host: '31.220.59.240',
         user: 'lookforit_user',
         password: 'Entrada2021$',
         database: 'dbtask'
