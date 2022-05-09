@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class TaskesatusService {
 
-  API_URI = 'http://localhost:3000/api';
+  API_URI = 'https://adminstackackend.herokuapp.com/api';
   constructor(private http:HttpClient) {}
     getTasksEstatus() {
       return this.http.get(`${this.API_URI}/TaskEstatus`);

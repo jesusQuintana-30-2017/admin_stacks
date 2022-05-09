@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://admintask2022.herokuapp.com/api/Task/filtros/P",
+					"raw": "https://adminstackackend.herokuapp.com/api/Task/filtros/P",
 					"protocol": "https",
 					"host": [
 						"admintask2022",
@@ -34,7 +34,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://admintask2022.herokuapp.com/api/Task/1",
+					"raw": "https://adminstackackend.herokuapp.com/api/Task/1",
 					"protocol": "https",
 					"host": [
 						"admintask2022",
@@ -56,7 +56,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://admintask2022.herokuapp.com/api/Task/1",
+					"raw": "https://adminstackackend.herokuapp.com/api/Task/1",
 					"protocol": "https",
 					"host": [
 						"admintask2022",
@@ -78,7 +78,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "https://admintask2022.herokuapp.com/api/Task/start/1",
+					"raw": "https://adminstackackend.herokuapp.com/api/Task/start/1",
 					"protocol": "https",
 					"host": [
 						"admintask2022",
@@ -101,7 +101,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "https://admintask2022.herokuapp.com/api/Task?id=0&description=tarea nueva3&start_date=2022-05-01&final_date=2022-05-30&duration=0&current_time=0&estatus=P&time_total=0",
+					"raw": "https://adminstackackend.herokuapp.com/api/Task?id=0&description=tarea nueva3&start_date=2022-05-01&final_date=2022-05-30&duration=0&current_time=0&estatus=P&time_total=0",
 					"protocol": "https",
 					"host": [
 						"admintask2022",
@@ -156,7 +156,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "https://admintask2022.herokuapp.com/api/Task?id=0&description=tarea nueva3&start_date=2022-05-01&final_date=2022-05-30&duration=0&current_time=0&estatus=P&time_total=0",
+					"raw": "https://adminstackackend.herokuapp.com/api/Task?id=0&description=tarea nueva3&start_date=2022-05-01&final_date=2022-05-30&duration=0&current_time=0&estatus=P&time_total=0",
 					"protocol": "https",
 					"host": [
 						"admintask2022",
@@ -211,7 +211,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "https://admintask2022.herokuapp.com/api/Task/time/1",
+					"raw": "https://adminstackackend.herokuapp.com/api/Task/time/1",
 					"protocol": "https",
 					"host": [
 						"admintask2022",
@@ -234,7 +234,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "https://admintask2022.herokuapp.com/api/Task/stop/1",
+					"raw": "https://adminstackackend.herokuapp.com/api/Task/stop/1",
 					"protocol": "https",
 					"host": [
 						"admintask2022",
@@ -289,7 +289,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://admintask2022.herokuapp.com/api/TaskEstatus/",
+					"raw": "https://adminstackackend.herokuapp.com/api/TaskEstatus/",
 					"protocol": "https",
 					"host": [
 						"admintask2022",
@@ -311,7 +311,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://admintask2022.herokuapp.com/api/TaskEstatus/Filtro/",
+					"raw": "https://adminstackackend.herokuapp.com/api/TaskEstatus/Filtro/",
 					"protocol": "https",
 					"host": [
 						"admintask2022",
